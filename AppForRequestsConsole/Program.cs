@@ -12,15 +12,16 @@ namespace AppForRequestsConsole
         {
             Console.WriteLine("Введите количество вводимых заявок: ");
             int countRequest = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Заявки вводятся по маске:");
-            Console.WriteLine("Заявка (номер число), (название детали строка) - (количество число)");
+            //Console.WriteLine("Заявки вводятся по маске:");
+            //Console.WriteLine("Заявка (номер число), (название детали строка) - (количество число)");
             List<Request> requestList = new List<Request>();
             for (int i = 0; i < countRequest; i++)
-            {
-                Console.Write("Заявка №");
+            { 
+                Console.Write("Заявка № ");
                 int requestNumber = Convert.ToInt32(Console.ReadLine());
-                Console.Write(",");
+                Console.Write($"Деталь для заявки №{requestNumber} ");
                 string partName = Console.ReadLine();
+                Console.Write($"Количество детали \"{partName}\" ");
                 int quantity = Convert.ToInt32(Console.ReadLine());
                 requestList.Add(new Request(requestNumber, partName, quantity));
             }
