@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Исполнение заявок сервисных центров на поставку запасных частей для ремонта автомобиля, приехавшего на сервисное обслуживание" Height="300" Width="500" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="buttonInput" Content="Ввод" HorizontalAlignment="Left" Margin="137,59,0,0" VerticalAlignment="Top" Width="209" Height="62" Click="buttonInput_Click"/>
-        <Button x:Name="buttonOutput" Content="Вывод" HorizontalAlignment="Left" Margin="137,150,0,0" VerticalAlignment="Top" Width="209" Height="62
+        <Button x:Name="buttonInputRequest" Content="Ввод заявки" HorizontalAlignment="Left" Margin="23,53,0,0" VerticalAlignment="Top" Width="190" Height="62" Click="buttonInput_Click"/>
+        <Button x:Name="buttonOutput" Content="Вывод" HorizontalAlignment="Left" Margin="137,150,0,0" VerticalAlignment="Top" Width="201" Height="62
                 "/>
+        <Button x:Name="buttonInputInvoice" Content="Ввод накладной" HorizontalAlignment="Left" Margin="278,53,0,0" VerticalAlignment="Top" Width="191" Height="62"/>
     </Grid>
 </Window>

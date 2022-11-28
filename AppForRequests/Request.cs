@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace AppForRequests
 {
-    class Request
-    {
+    class Request { 
+        private string requestNumber
+        {
+            get; set;
+        }
+        private string nameOfDetail
+        {
+            get; set;
+        }
+
     }
 }
