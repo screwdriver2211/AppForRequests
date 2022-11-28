@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppForRequests
+﻿namespace AppForRequests
 {
     class ConsignmentNote
     {
@@ -16,7 +10,7 @@ namespace AppForRequests
         {
             NumberConsignment = numberConsignment;
             PartName = partName;
-            QuantityShipped = quantityShipped; 
+            QuantityShipped = quantityShipped;
         }
     }
 }

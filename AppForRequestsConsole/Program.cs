@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppForRequestsConsole
 {
@@ -11,51 +8,55 @@ namespace AppForRequestsConsole
 
         public static void Calculate(Request rec, List<ConsignmentNote> consignmentList)
         {
-            foreach(var item in consignmentList)
+            foreach (var item in consignmentList)
             {
                 if (rec.PartName == item.PartName)
                 {
                     if (rec.QuantityOrdered == item.QuantityShipped)
                     {
                         int count = rec.QuantityOrdered;
+                        Console.WriteLine(rec.ToString() + " " + item.ToString());
                         rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
 
-                        Console.WriteLine(rec.ToString() + " " + item.ToString());
+                       
                         item.QuantityShipped -= count;
                         return;
                     }
-                }
-                if (rec.QuantityOrdered > item.QuantityShipped)
-                 {
+                    if (rec.QuantityOrdered > item.QuantityShipped)
+                    {
                         int count = item.QuantityShipped;
-                        rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
                         Console.WriteLine(rec.ToString() + " " + item.ToString());
+                        rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
+                        
                         item.QuantityShipped -= count;
                         if (rec.QuantityOrdered == 0)
                         {
                             return;
                         }
-                 }
-                if (rec.QuantityOrdered < item.QuantityShipped)
-                {
-                    int count = rec.QuantityOrdered;
-                    rec.QuantityOrdered = rec.QuantityOrdered - count;
-                    Console.WriteLine(rec.ToString() + " " + "отгружено - " + count + " шт(накладная №" + item.NumberConsignment );
-                    item.QuantityShipped -= count;
-                    if (rec.QuantityOrdered == 0)
+                    }
+                    if (rec.QuantityOrdered < item.QuantityShipped)
                     {
-                        return;
+                        int count = rec.QuantityOrdered;
+                        Console.WriteLine(rec.ToString() + " " + "отгружено - " + count + " шт(накладная №" + item.NumberConsignment);
+
+                        rec.QuantityOrdered = rec.QuantityOrdered - count;
+                        item.QuantityShipped -= count;
+                        if (rec.QuantityOrdered == 0)
+                        {
+                            return;
+                        }
                     }
                 }
-
             }
+
+                Console.WriteLine(rec.ToString() + " отгружено - нет");
         }
 
         static void Main(string[] args)
         {
             Console.WriteLine("Введите количество вводимых заявок: ");
-            int countRequest ;
-            while (!int.TryParse(Console.ReadLine(), out countRequest)&& countRequest<1)
+            int countRequest;
+            while (!int.TryParse(Console.ReadLine(), out countRequest) && countRequest < 1)
             {
                 Console.WriteLine("Ввод произведен не верно повторите ввод: ");
             }
@@ -67,8 +68,8 @@ namespace AppForRequestsConsole
             for (int i = 0; i < countRequest; i++)
             {
                 Console.Write("Заявка № ");
-                int requestNumber; 
-                    while (!int.TryParse(Console.ReadLine(), out requestNumber) && countRequest < 1)
+                int requestNumber;
+                while (!int.TryParse(Console.ReadLine(), out requestNumber) && countRequest < 1)
                 {
                     Console.WriteLine("Ввод произведен не верно повторите ввод: ");
                 }
@@ -85,12 +86,12 @@ namespace AppForRequestsConsole
 
             Console.WriteLine("Введите количество вводимых заявок: ");
             int countConsignment;
-            while (!int.TryParse(Console.ReadLine() ,out countConsignment))
+            while (!int.TryParse(Console.ReadLine(), out countConsignment))
             {
                 Console.WriteLine("Ввод произведен неверно повторите ввод: ");
             }
-            
-            
+
+
             Console.WriteLine("Накладная вводится по маске:");
             Console.WriteLine("Накладная (номер число), (название детали строка) - (количество число)");
             List<ConsignmentNote> consignmentList = new List<ConsignmentNote>();
@@ -102,7 +103,7 @@ namespace AppForRequestsConsole
                 {
                     Console.WriteLine("Ввод произведен не верно повторите ввод: ");
                 }
-                 
+
                 Console.Write(",");
                 string partName = Console.ReadLine();
                 int quantity;
@@ -120,7 +121,7 @@ namespace AppForRequestsConsole
             }
             foreach (var item in consignmentList)
             {
-                Console.WriteLine(  item.ToString());
+                Console.WriteLine(item.ToString());
             }
             foreach (var item in requestList)
             {

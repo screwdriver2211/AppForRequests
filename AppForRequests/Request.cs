@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppForRequests
+﻿namespace AppForRequests
 {
-   
-    class Request { 
+
+    class Request
+    {
         private string requestNumber
         {
             get; set;
@@ -25,6 +20,6 @@ namespace AppForRequests
             this.requestNumber = requestNumber;
             this.nameOfDetail = nameOfDetail;
             this.countOfDetail = countOfDetail;
-        }  
+        }
     }
 }
