@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppForRequests"
         mc:Ignorable="d"
-        Title="Ввод накладной" Height="300" Width="500">
+        Title="Ввод накладной" Height="300" Width="500" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="numberOfRequest" HorizontalAlignment="Left" Height="32" Margin="215,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
         <Label x:Name="labelConsignment" Content="№ накладной" HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="125" FontSize="16"/>
