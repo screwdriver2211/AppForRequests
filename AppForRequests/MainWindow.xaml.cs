@@ -30,5 +30,17 @@ namespace AppForRequests
             EnterForm enterForm = new EnterForm();
             enterForm.Show();
         }
+
+        private void buttonInputInvoice_Click(object sender, RoutedEventArgs e)
+        {
+            EnterConsignmentNote ecn = new EnterConsignmentNote();
+            ecn.Show();
+        }
+
+        private void buttonOutput_Click(object sender, RoutedEventArgs e)
+        {
+            Output output = new Output();
+            output.Show();
+        }
     }
 }

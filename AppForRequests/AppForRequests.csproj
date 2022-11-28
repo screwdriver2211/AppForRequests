@@ -96,9 +96,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppForHackatoneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppForHackatoneDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsignmentNote.cs" />
     <Compile Include="EnterConsignmentNote.xaml.cs">
       <DependentUpon>EnterConsignmentNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Output.xaml.cs">
+      <DependentUpon>Output.xaml</DependentUpon>
     </Compile>
     <Compile Include="Request.cs" />
     <Page Include="EnterConsignmentNote.xaml">
@@ -124,6 +132,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Output.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -143,6 +155,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="AppForHackatoneDataSet.xsc">
+      <DependentUpon>AppForHackatoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AppForHackatoneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppForHackatoneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppForHackatoneDataSet.xss">
+      <DependentUpon>AppForHackatoneDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,6 +175,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppForHackatone.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
