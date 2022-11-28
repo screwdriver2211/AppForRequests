@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppForRequests"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Исполнение заявок сервисных центров на поставку запасных частей для ремонта автомобиля, приехавшего на сервисное обслуживание" Height="800" Width="1000" ResizeMode="NoResize">
     <Grid>
-        
+        <Button x:Name="buttonInput" Content="Ввод" HorizontalAlignment="Left" Margin="126,108,0,0" VerticalAlignment="Top" Width="209" Height="62" Click="buttonInput_Click"/>
+        <Button x:Name="buttonOutput" Content="Вывод" HorizontalAlignment="Left" Margin="393,212,0,0" VerticalAlignment="Top" Width="209" Height="62
+                "/>
     </Grid>
 </Window>
