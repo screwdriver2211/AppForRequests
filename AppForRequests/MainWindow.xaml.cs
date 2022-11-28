@@ -40,5 +40,11 @@ namespace AppForRequests
             EnterConsignmentNote ecn = new EnterConsignmentNote();
             ecn.ShowDialog();
         }
+
+        private void buttonOutput_Click_1(object sender, RoutedEventArgs e)
+        {
+            Output output = new Output();
+            output.ShowDialog();
+        }
     }
 }

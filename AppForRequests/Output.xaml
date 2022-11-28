@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppForRequests"
         mc:Ignorable="d"
-        Title="Output" Height="500" Width="700" ResizeMode="NoResize">
+        Title="Общая информация" Height="400" Width="700" ResizeMode="NoResize">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="441" Width="666"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="330" Width="672"/>
 
     </Grid>
 </Window>
