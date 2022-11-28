@@ -16,24 +16,17 @@ namespace AppForRequestsConsole
             {
                 Console.WriteLine("Ввод произведен не верно повторите ввод: ");
             }
-            Console.WriteLine("Заявки вводятся по маске:");
-            Console.WriteLine("Заявка (номер число), (название детали строка) - (количество число)");
+            //Console.WriteLine("Заявки вводятся по маске:");
+            //Console.WriteLine("Заявка (номер число), (название детали строка) - (количество число)");
             List<Request> requestList = new List<Request>();
             for (int i = 0; i < countRequest; i++)
             {
-                Console.Write("Заявка №");
-                int requestNumber;
-                while (!int.TryParse(Console.ReadLine(), out requestNumber))
-                {
-                    Console.WriteLine("Ввод произведен не верно повторите ввод: ");
-                }
-                Console.Write(",");
+                Console.Write("Заявка № ");
+                int requestNumber = Convert.ToInt32(Console.ReadLine());
+                Console.Write($"Деталь для заявки №{requestNumber} ");
                 string partName = Console.ReadLine();
-                int quantity ;
-                while (!int.TryParse(Console.ReadLine(), out quantity))
-                {
-                    Console.WriteLine("Ввод произведен не верно повторите ввод: ");
-                }
+                Console.Write($"Количество детали \"{partName}\" ");
+                int quantity = Convert.ToInt32(Console.ReadLine());
                 requestList.Add(new Request(requestNumber, partName, quantity));
             }
 
@@ -41,7 +34,7 @@ namespace AppForRequestsConsole
             int countConsignment;
             while (!int.TryParse(Console.ReadLine() ,out countConsignment))
             {
-                Console.WriteLine("Ввод произведен не верно повторите ввод: ");
+                Console.WriteLine("Ввод произведен неверно повторите ввод: ");
             }
             
             
