@@ -19,6 +19,11 @@ namespace AppForRequests
         {
             get; set;
         }
-                 
+        public Request(string requestNumber, string nameOfDetail, int countOfDetail)
+        {
+            this.requestNumber = requestNumber;
+            this.nameOfDetail = nameOfDetail;
+            this.countOfDetail = countOfDetail;
+        }  
     }
 }

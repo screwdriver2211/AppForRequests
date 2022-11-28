@@ -96,7 +96,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConsignmentNote.cs" />
+    <Compile Include="EnterConsignmentNote.xaml.cs">
+      <DependentUpon>EnterConsignmentNote.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Request.cs" />
+    <Page Include="EnterConsignmentNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EnterForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
