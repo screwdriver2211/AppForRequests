@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="buttonInputRequest" Template="{StaticResource btnLKPage}" Content="Ввод заявки" HorizontalAlignment="Left" Margin="23,115,0,0" VerticalAlignment="Top" Width="192" Height="53" Click="buttonInput_Click"/>
         <Button x:Name="buttonOutput" Template="{StaticResource btnLKPage}" Content="Вывод" HorizontalAlignment="Left" Margin="138,199,0,0" VerticalAlignment="Top" Width="204" Height="53"/>
-        <Button x:Name="buttonInputInvoice" Template="{StaticResource btnLKPage}" Content="Ввод накладной" HorizontalAlignment="Left" Margin="281,115,0,0" VerticalAlignment="Top" Width="193" Height="53"/>
+        <Button x:Name="buttonInputInvoice" Template="{StaticResource btnLKPage}" Content="Ввод накладной" HorizontalAlignment="Left" Margin="281,115,0,0" VerticalAlignment="Top" Width="193" Height="53" Click="buttonInputInvoice_Click_1"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="164,10,0,0" VerticalAlignment="Top" Width="191" Source="resourse/image-PhotoRoom.png" Stretch="Fill" />
     </Grid>
 </Window>

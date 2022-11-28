@@ -28,19 +28,17 @@ namespace AppForRequests
         private void buttonInput_Click(object sender, RoutedEventArgs e)
         {
             EnterForm enterForm = new EnterForm();
-            enterForm.Show();
+            enterForm.ShowDialog();
         }
-
-        private void buttonInputInvoice_Click(object sender, RoutedEventArgs e)
-        {
-            EnterConsignmentNote ecn = new EnterConsignmentNote();
-            ecn.Show();
-        }
-
         private void buttonOutput_Click(object sender, RoutedEventArgs e)
         {
-            Output output = new Output();
-            output.Show();
+
+        }
+
+        private void buttonInputInvoice_Click_1(object sender, RoutedEventArgs e)
+        {
+            EnterConsignmentNote ecn = new EnterConsignmentNote();
+            ecn.ShowDialog();
         }
     }
 }
