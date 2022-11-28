@@ -12,21 +12,30 @@ namespace AppForRequestsConsole
         {
             Console.WriteLine("Введите количество вводимых заявок: ");
             int countRequest ;
-            while (!int.TryParse(Console.ReadLine(), out countRequest))
+            while (!int.TryParse(Console.ReadLine(), out countRequest)&& countRequest<1)
             {
                 Console.WriteLine("Ввод произведен не верно повторите ввод: ");
             }
+
             //Console.WriteLine("Заявки вводятся по маске:");
             //Console.WriteLine("Заявка (номер число), (название детали строка) - (количество число)");
             List<Request> requestList = new List<Request>();
             for (int i = 0; i < countRequest; i++)
             {
                 Console.Write("Заявка № ");
-                int requestNumber = Convert.ToInt32(Console.ReadLine());
+                int requestNumber; 
+                    while (!int.TryParse(Console.ReadLine(), out requestNumber) && countRequest < 1)
+                {
+                    Console.WriteLine("Ввод произведен не верно повторите ввод: ");
+                }
                 Console.Write($"Деталь для заявки №{requestNumber} ");
                 string partName = Console.ReadLine();
                 Console.Write($"Количество детали \"{partName}\" ");
-                int quantity = Convert.ToInt32(Console.ReadLine());
+                int quantity;
+                while (!int.TryParse(Console.ReadLine(), out quantity) && countRequest < 1)
+                {
+                    Console.WriteLine("Ввод произведен не верно повторите ввод: ");
+                }
                 requestList.Add(new Request(requestNumber, partName, quantity));
             }
 
@@ -45,7 +54,7 @@ namespace AppForRequestsConsole
             {
                 Console.Write("Накладная №");
                 int consignmentNumber;
-                while (!int.TryParse(Console.ReadLine(), out consignmentNumber))
+                while (!int.TryParse(Console.ReadLine(), out consignmentNumber) && countRequest < 1)
                 {
                     Console.WriteLine("Ввод произведен не верно повторите ввод: ");
                 }
@@ -53,7 +62,7 @@ namespace AppForRequestsConsole
                 Console.Write(",");
                 string partName = Console.ReadLine();
                 int quantity;
-                while (!int.TryParse(Console.ReadLine(), out quantity))
+                while (!int.TryParse(Console.ReadLine(), out quantity) && countRequest < 1)
                 {
                     Console.WriteLine("Ввод произведен не верно повторите ввод: ");
                 }
