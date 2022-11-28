@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:AppForRequests"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="wndwStyle"  TargetType ="TextBlock">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <ControlTemplate x:Key="btnLKPage" TargetType="Button">
+            <Border CornerRadius="5"  Background="#FF234B83" >
+                <ContentControl  Content="{TemplateBinding Content}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="24"/>
+            </Border>
+        </ControlTemplate>
     </Application.Resources>
 </Application>

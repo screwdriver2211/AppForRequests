@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppForRequests"
         mc:Ignorable="d"
-        Title="Исполнение заявок сервисных центров на поставку запасных частей для ремонта автомобиля, приехавшего на сервисное обслуживание" Height="300" Width="500" ResizeMode="NoResize">
+        Title="Исполнение заявок сервисных центров на поставку запасных частей" Height="300" Width="500" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="buttonInputRequest" Content="Ввод заявки" HorizontalAlignment="Left" Margin="23,53,0,0" VerticalAlignment="Top" Width="190" Height="62" Click="buttonInput_Click"/>
-        <Button x:Name="buttonOutput" Content="Вывод" HorizontalAlignment="Left" Margin="137,150,0,0" VerticalAlignment="Top" Width="201" Height="62
-                "/>
-        <Button x:Name="buttonInputInvoice" Content="Ввод накладной" HorizontalAlignment="Left" Margin="278,53,0,0" VerticalAlignment="Top" Width="191" Height="62"/>
+        <Button x:Name="buttonInputRequest" Template="{StaticResource btnLKPage}" Content="Ввод заявки" HorizontalAlignment="Left" Margin="23,115,0,0" VerticalAlignment="Top" Width="192" Height="53" Click="buttonInput_Click"/>
+        <Button x:Name="buttonOutput" Template="{StaticResource btnLKPage}" Content="Вывод" HorizontalAlignment="Left" Margin="138,199,0,0" VerticalAlignment="Top" Width="204" Height="53" Click="buttonOutput_Click_1"/>
+        <Button x:Name="buttonInputInvoice" Template="{StaticResource btnLKPage}" Content="Ввод накладной" HorizontalAlignment="Left" Margin="281,115,0,0" VerticalAlignment="Top" Width="193" Height="53" Click="buttonInputInvoice_Click_1"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="164,10,0,0" VerticalAlignment="Top" Width="191" Source="resourse/image-PhotoRoom.png" Stretch="Fill" />
     </Grid>
 </Window>
