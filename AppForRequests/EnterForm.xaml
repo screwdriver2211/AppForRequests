@@ -13,7 +13,7 @@
         <TextBox x:Name="codeOfDetail" HorizontalAlignment="Left" Height="30" Margin="215,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
         <Label x:Name="labelCount" Content="Количество" HorizontalAlignment="Left" Margin="44,148,0,0" VerticalAlignment="Top" Width="156" FontSize="16" RenderTransformOrigin="1.397,0.581"/>
         <TextBox x:Name="textBoxCount" HorizontalAlignment="Left" Height="30" Margin="215,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
-        <Button x:Name="buttonEnterRequest" Content="Ввести заявку" HorizontalAlignment="Left" Margin="132,197,0,0" VerticalAlignment="Top" Width="248" Height="32"/>
+        <Button x:Name="buttonEnterRequest" Template="{StaticResource btnLKPage}" Content="Ввести заявку" HorizontalAlignment="Left" Margin="132,197,0,0" VerticalAlignment="Top" Width="248" Height="32"/>
 
     </Grid>
 </Window>
