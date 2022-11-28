@@ -10,55 +10,22 @@ namespace AppForRequestsConsole
     {
         private int NumberConsignment { get; set; }
         private string PartName { get; set; }
-        private int PartId { get; set; }
         private int QuantityShipped { get; set; }
-        private bool IsNotNullQuantity { get; set; }
 
-        public ConsignmentNote(int numberConsignment, int quantityShipped, string partName = null, int partId = -1)
+        public ConsignmentNote(int numberConsignment, string partName, int quantityShipped)
         {
             NumberConsignment = numberConsignment;
-            PartId = partId;
             PartName = partName;
             QuantityShipped = quantityShipped;
-            IsNotNullQuantity = true;
         }
-
-        public  string ShowConsignment()
+        public override string ToString()
         {
-            string partrInform = "";
-            if (PartName == null && PartId != -1)
-            {
-                partrInform =PartId.ToString();
-            }
-            else if (PartName != null && PartId == -1)
-            {
-                partrInform = PartName;
-            }
-
-            return "Накладная № " + NumberConsignment + ", " + partrInform + " - " + QuantityShipped + " шт";
+            if (QuantityShipped != 0)
+                return $"отгружено - {QuantityShipped} шт (накладная №{NumberConsignment})";
+            else
+                return $"отгруено - нет";
         }
-        public  string ShowRemainderConsignment(int needCount)
-        {
-            int quantity=-1;
-            if (QuantityShipped ==0)
-            {
-                IsNotNullQuantity = false;
-                return " нет";
-            }
-            if (needCount> QuantityShipped)
-            {
-                quantity = QuantityShipped;
-            } else if(needCount < QuantityShipped)
-            {
-                quantity = needCount;
-            }
-            else if (needCount == QuantityShipped)
-            {
-                quantity = needCount;
-            }
 
-            return  quantity + " шт (Накладная № " + NumberConsignment +") ";
-        }
     }
 }
 

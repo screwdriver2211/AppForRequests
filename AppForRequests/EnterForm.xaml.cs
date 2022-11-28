@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Data.OleDb;
 namespace AppForRequests
 {
     /// <summary>
@@ -22,6 +22,12 @@ namespace AppForRequests
         public EnterForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonEnterRequest_Click(object sender, RoutedEventArgs e)
+        {
+            Database db = new Database();
+            //db.Requests.Inse
         }
     }
 }
