@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AppForRequests
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для EnterForm.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EnterForm : Window
     {
-        public MainWindow()
+        public EnterForm()
         {
             InitializeComponent();
-        }
-
-        private void buttonInput_Click(object sender, RoutedEventArgs e)
-        {
-            EnterForm enterForm = new EnterForm();
-            enterForm.Show();
         }
     }
 }
