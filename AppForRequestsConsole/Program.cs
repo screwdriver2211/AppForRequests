@@ -18,7 +18,7 @@ namespace AppForRequestsConsole
                         Console.WriteLine(rec.ToString() + " " + item.ToString());
                         rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
 
-                       
+
                         item.QuantityShipped -= count;
                         return;
                     }
@@ -27,7 +27,7 @@ namespace AppForRequestsConsole
                         int count = item.QuantityShipped;
                         Console.WriteLine(rec.ToString() + " " + item.ToString());
                         rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
-                        
+
                         item.QuantityShipped -= count;
                         if (rec.QuantityOrdered == 0)
                         {
@@ -49,7 +49,7 @@ namespace AppForRequestsConsole
                 }
             }
 
-                Console.WriteLine(rec.ToString() + " отгружено - нет");
+            Console.WriteLine(rec.ToString() + " отгружено - нет");
         }
 
         static void Main(string[] args)
