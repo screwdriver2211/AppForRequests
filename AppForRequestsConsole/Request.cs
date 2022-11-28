@@ -8,34 +8,23 @@ namespace AppForRequestsConsole
 {
     class Request
     {
+        /// <summary>
+        /// Номер заявки
+        /// </summary>
         private int NumberRequest { get; set; }
         private string PartName { get; set; }
-        private int PartId { get; set; }
-        private int QuantityShipped { get; set; }
-        private bool IsNotNullQuantity { get; set; }
+        private int QuantityOrdered { get; set; }
+        
 
-        public Request(int numberConsignment, int quantityShipped, string partName = null, int partId = -1)
+        public Request(int numberConsignment, string partName, int quantityOrdered)
         {
             NumberRequest = numberConsignment;
-            PartId = partId;
             PartName = partName;
-            QuantityShipped = quantityShipped;
-            IsNotNullQuantity = true;
+            QuantityOrdered = quantityOrdered;
         }
-
-        public string ShowConsignment()
+        public override string ToString()
         {
-            string partrInform = "";
-            if (PartName == null && PartId != -1)
-            {
-                partrInform = PartId.ToString();
-            }
-            else if (PartName != null && PartId == -1)
-            {
-                partrInform = PartName;
-            }
-
-            return "Заявка № " + NumberRequest + ", " + partrInform + " - " + QuantityShipped + " шт";
+            return $"Заявка №{NumberRequest}. {PartName}: заказано - {QuantityOrdered} шт, ";
         }
 
     }
