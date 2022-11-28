@@ -8,21 +8,22 @@ namespace AppForRequestsConsole
 {
     class ConsignmentNote
     {
-            static int NumberConsignment;
-        static string PartName;
-        static int PartId;
-        static int QuantityShipped;
-        static bool IsNullQuantity;
-        public ConsignmentNote(int numberConsignment, string partName = null, int partId = -1, int quantityShipped)
+        private int NumberConsignment { get; set; }
+        private string PartName { get; set; }
+        private int PartId { get; set; }
+        private int QuantityShipped { get; set; }
+        private bool IsNotNullQuantity { get; set; }
+
+        public ConsignmentNote(int numberConsignment, int quantityShipped, string partName = null, int partId = -1)
         {
             NumberConsignment = numberConsignment;
             PartId = partId;
             PartName = partName;
             QuantityShipped = quantityShipped;
-            IsNullQuantity = true;
+            IsNotNullQuantity = true;
         }
 
-        public static string ShowConsignment()
+        public  string ShowConsignment()
         {
             string partrInform = "";
             if (PartName == null && PartId != -1)
@@ -36,12 +37,12 @@ namespace AppForRequestsConsole
 
             return "Накладная № " + NumberConsignment + ", " + partrInform + " - " + QuantityShipped + " шт";
         }
-        public static string ShowRemainderConsignment(int needCount)
+        public  string ShowRemainderConsignment(int needCount)
         {
             int quantity=-1;
             if (QuantityShipped ==0)
             {
-                IsNullQuantity = false;
+                IsNotNullQuantity = false;
                 return " нет";
             }
             if (needCount> QuantityShipped)
@@ -49,12 +50,14 @@ namespace AppForRequestsConsole
                 quantity = QuantityShipped;
             } else if(needCount < QuantityShipped)
             {
-
+                quantity = needCount;
+            }
+            else if (needCount == QuantityShipped)
+            {
+                quantity = needCount;
             }
 
-
-
-            return "Накладная № " + NumberConsignment + ", " + partrInform + " - " + QuantityShipped + " шт";
+            return  quantity + " шт (Накладная № " + NumberConsignment +") ";
         }
     }
 }
