@@ -11,9 +11,9 @@ namespace AppForRequestsConsole
         /// <summary>
         /// Номер заявки
         /// </summary>
-        private int NumberRequest { get; set; }
-        private string PartName { get; set; }
-        private int QuantityOrdered { get; set; }
+        public int NumberRequest { get; set; }
+        public string PartName { get; set; }
+        public int QuantityOrdered { get; set; }
         
 
         public Request(int numberConsignment, string partName, int quantityOrdered)

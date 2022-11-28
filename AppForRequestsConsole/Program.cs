@@ -8,6 +8,49 @@ namespace AppForRequestsConsole
 {
     class Program
     {
+
+        public static void Calculate(Request rec, List<ConsignmentNote> consignmentList)
+        {
+            foreach(var item in consignmentList)
+            {
+                if (rec.PartName == item.PartName)
+                {
+                    if (rec.QuantityOrdered == item.QuantityShipped)
+                    {
+                        int count = rec.QuantityOrdered;
+                        rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
+
+                        Console.WriteLine(rec.ToString() + " " + item.ToString());
+                        item.QuantityShipped -= count;
+                        return;
+                    }
+                }
+                if (rec.QuantityOrdered > item.QuantityShipped)
+                 {
+                        int count = item.QuantityShipped;
+                        rec.QuantityOrdered = rec.QuantityOrdered - item.QuantityShipped;
+                        Console.WriteLine(rec.ToString() + " " + item.ToString());
+                        item.QuantityShipped -= count;
+                        if (rec.QuantityOrdered == 0)
+                        {
+                            return;
+                        }
+                 }
+                if (rec.QuantityOrdered < item.QuantityShipped)
+                {
+                    int count = rec.QuantityOrdered;
+                    rec.QuantityOrdered = rec.QuantityOrdered - count;
+                    Console.WriteLine(rec.ToString() + " " + "отгружено - " + count + " шт(накладная №" + item.NumberConsignment );
+                    item.QuantityShipped -= count;
+                    if (rec.QuantityOrdered == 0)
+                    {
+                        return;
+                    }
+                }
+
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Введите количество вводимых заявок: ");
@@ -19,6 +62,7 @@ namespace AppForRequestsConsole
 
             //Console.WriteLine("Заявки вводятся по маске:");
             //Console.WriteLine("Заявка (номер число), (название детали строка) - (количество число)");
+
             List<Request> requestList = new List<Request>();
             for (int i = 0; i < countRequest; i++)
             {
@@ -78,7 +122,10 @@ namespace AppForRequestsConsole
             {
                 Console.WriteLine(  item.ToString());
             }
-
+            foreach (var item in requestList)
+            {
+                Calculate(item, consignmentList);
+            }
             Console.Read();
         }
     }

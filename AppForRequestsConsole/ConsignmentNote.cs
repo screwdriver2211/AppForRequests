@@ -8,9 +8,9 @@ namespace AppForRequestsConsole
 {
     class ConsignmentNote
     {
-        private int NumberConsignment { get; set; }
-        private string PartName { get; set; }
-        private int QuantityShipped { get; set; }
+        public int NumberConsignment { get; set; }
+        public string PartName { get; set; }
+        public int QuantityShipped { get; set; }
 
         public ConsignmentNote(int numberConsignment, string partName, int quantityShipped)
         {
