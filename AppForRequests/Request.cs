@@ -15,6 +15,10 @@ namespace AppForRequests
         {
             get; set;
         }
-
+        private int countOfDetail
+        {
+            get; set;
+        }
+        public Requ
     }
 }
