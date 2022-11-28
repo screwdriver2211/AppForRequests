@@ -96,6 +96,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppForHackatoneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppForHackatoneDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsignmentNote.cs" />
     <Compile Include="EnterConsignmentNote.xaml.cs">
       <DependentUpon>EnterConsignmentNote.xaml</DependentUpon>
@@ -150,6 +155,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="AppForHackatoneDataSet1.xsc">
+      <DependentUpon>AppForHackatoneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AppForHackatoneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppForHackatoneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppForHackatoneDataSet1.xss">
+      <DependentUpon>AppForHackatoneDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,7 +176,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AppForHackatone.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="resourse\image-PhotoRoom.png" />
   </ItemGroup>
