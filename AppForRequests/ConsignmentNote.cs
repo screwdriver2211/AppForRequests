@@ -16,7 +16,7 @@ namespace AppForRequests
         {
             NumberConsignment = numberConsignment;
             PartName = partName;
-            QuantityShipped = quantityShipped;
+            QuantityShipped = quantityShipped; 
         }
     }
 }
