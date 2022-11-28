@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppForRequests
 {
-    static List<Request> requests = new List<Request>();
+   
     class Request { 
         private string requestNumber
         {
