@@ -115,12 +115,14 @@ namespace AppForRequestsConsole
             Console.WriteLine("Исходные данные:");
             foreach (var item in requestList)
             {
-                Console.WriteLine($"Накладная №{item.NumberRequest}, {item.PartName} - {item.QuantityOrdered} шт");
+                Console.WriteLine($"Заявка №{item.NumberRequest}, {item.PartName} - {item.QuantityOrdered} шт");
             }
             foreach (var item in consignmentList)
             {
                 Console.WriteLine($"Накладная №{item.NumberConsignment}, {item.PartName} - {item.QuantityShipped} шт");
             }
+            Console.WriteLine();
+            Console.WriteLine();
             foreach (var item in requestList)
             {
                 Calculate(item, consignmentList);
