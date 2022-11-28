@@ -75,7 +75,7 @@ namespace AppForRequestsConsole
                 }
                 Console.Write($"Деталь для заявки №{requestNumber} ");
                 string partName = Console.ReadLine();
-                Console.Write($"Количество детали \"{partName}\" ");
+                Console.Write($"Количество деталей \"{partName}\" ");
                 int quantity;
                 while (!int.TryParse(Console.ReadLine(), out quantity) && countRequest < 1)
                 {
@@ -84,27 +84,25 @@ namespace AppForRequestsConsole
                 requestList.Add(new Request(requestNumber, partName, quantity));
             }
 
-            Console.WriteLine("Введите количество вводимых заявок: ");
+            Console.WriteLine("Введите количество вводимых накладных: ");
             int countConsignment;
             while (!int.TryParse(Console.ReadLine(), out countConsignment))
             {
                 Console.WriteLine("Ввод произведен неверно повторите ввод: ");
             }
 
-
-            Console.WriteLine("Накладная вводится по маске:");
-            Console.WriteLine("Накладная (номер число), (название детали строка) - (количество число)");
+            Console.WriteLine("Введите номер накладной ");
             List<ConsignmentNote> consignmentList = new List<ConsignmentNote>();
             for (int i = 0; i < countConsignment; i++)
             {
-                Console.Write("Накладная №");
+                Console.Write("Накладная № ");
                 int consignmentNumber;
                 while (!int.TryParse(Console.ReadLine(), out consignmentNumber) && countRequest < 1)
                 {
-                    Console.WriteLine("Ввод произведен не верно повторите ввод: ");
+                    Console.WriteLine("Ввод произведен неверно повторите ввод: ");
                 }
 
-                Console.Write(",");
+                Console.Write($"Деталь для накладной №{consignmentNumber} ");
                 string partName = Console.ReadLine();
                 int quantity;
                 while (!int.TryParse(Console.ReadLine(), out quantity) && countRequest < 1)
@@ -117,11 +115,11 @@ namespace AppForRequestsConsole
             Console.WriteLine("Исходные данные:");
             foreach (var item in requestList)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine($"Накладная №{item.NumberRequest}, {item.PartName} - {item.QuantityOrdered} шт");
             }
             foreach (var item in consignmentList)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine($"Накладная №{item.NumberConsignment}, {item.PartName} - {item.QuantityShipped} шт");
             }
             foreach (var item in requestList)
             {
