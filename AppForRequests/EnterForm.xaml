@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppForRequests"
         mc:Ignorable="d"
-        Title="EnterForm" Height="800" Width="1000">
+        Title="Ввод заявки" Height="300" Width="500">
     <Grid>
-        <TextBox x:Name="numberOfRequest" HorizontalAlignment="Left" Height="31" Margin="215,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="732" FontSize="21.333"/>
-        <Label x:Name="labelRequest" Content="№ заявки" HorizontalAlignment="Left" Margin="58,31,0,0" VerticalAlignment="Top" Width="82" FontSize="16"/>
-        <Label x:Name="labelName" Content="Название з/ч (или код з/ч)" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.167" FontSize="16"/>
-        <TextBox x:Name="codeOfDetail" HorizontalAlignment="Left" Height="31" Margin="215,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="732" FontSize="21.333"/>
-        <Label x:Name="labelCount" Content="Количество" HorizontalAlignment="Left" Margin="40,138,0,0" VerticalAlignment="Top" Width="156" FontSize="16" RenderTransformOrigin="1.397,0.581"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="31" Margin="215,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="732" FontSize="21.333"/>
+        <TextBox x:Name="numberOfRequest" HorizontalAlignment="Left" Height="32" Margin="215,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
+        <Label x:Name="labelRequest" Content="№ заявки" HorizontalAlignment="Left" Margin="58,56,0,0" VerticalAlignment="Top" Width="82" FontSize="16"/>
+        <Label x:Name="labelName" Content="Название з/ч (или код з/ч)" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.167" FontSize="16"/>
+        <TextBox x:Name="codeOfDetail" HorizontalAlignment="Left" Height="30" Margin="215,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
+        <Label x:Name="labelCount" Content="Количество" HorizontalAlignment="Left" Margin="40,164,0,0" VerticalAlignment="Top" Width="156" FontSize="16" RenderTransformOrigin="1.397,0.581"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" Margin="215,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
 
     </Grid>
 </Window>
