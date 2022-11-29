@@ -22,7 +22,7 @@ namespace AppForRequestsConsole
                         item.QuantityShipped -= count;
                         return;
                     }
-                    if (rec.QuantityOrdered > item.QuantityShipped)
+                    if (rec.QuantityOrdered > item.QuantityShipped&& item.QuantityShipped!=0)
                     {
                         int count = item.QuantityShipped;
                         Console.WriteLine(rec.ToString() + " " + item.ToString());
@@ -104,6 +104,7 @@ namespace AppForRequestsConsole
 
                 Console.Write($"Деталь для накладной №{consignmentNumber} ");
                 string partName = Console.ReadLine();
+                Console.Write($"Количество деталей \"{partName}\" ");
                 int quantity;
                 while (!int.TryParse(Console.ReadLine(), out quantity) && countRequest < 1)
                 {

@@ -17,7 +17,7 @@
             if (QuantityShipped != 0)
                 return $"отгружено - {QuantityShipped} шт (накладная №{NumberConsignment})";
             else
-                return $"отгруено - нет";
+                return $"отгружено - нет";
         }
 
     }
