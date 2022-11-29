@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Ввод накладной" Height="300" Width="500" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="numberOfRequest" HorizontalAlignment="Left" Height="32" Margin="215,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
+        <TextBox x:Name="numberOfConsignmentNotes" HorizontalAlignment="Left" Height="32" Margin="215,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
         <Label x:Name="labelConsignment" Content="№ накладной" HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="125" FontSize="16"/>
         <Label x:Name="labelName" Content="Название з/ч (или код з/ч)" HorizontalAlignment="Left" Margin="5,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.167" FontSize="16"/>
         <TextBox x:Name="codeOfDetail" HorizontalAlignment="Left" Height="30" Margin="215,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
         <Label x:Name="labelCount" Content="Количество" HorizontalAlignment="Left" Margin="35,148,0,0" VerticalAlignment="Top" Width="156" FontSize="16" RenderTransformOrigin="1.397,0.581"/>
         <TextBox x:Name="textBoxCount" HorizontalAlignment="Left" Height="30" Margin="215,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="267" FontSize="21.333"/>
-        <Button x:Name="buttonEnterConsignment" Template="{StaticResource btnLKPage}" Content="Ввести накладную" HorizontalAlignment="Left" Margin="132,197,0,0" VerticalAlignment="Top" Width="248" Height="32"/>
+        <Button x:Name="buttonEnterConsignment" Template="{StaticResource btnLKPage}" Content="Ввести накладную" HorizontalAlignment="Left" Margin="132,197,0,0" VerticalAlignment="Top" Width="248" Height="32" Click="buttonEnterConsignment_Click"/>
 
     </Grid>
 </Window>

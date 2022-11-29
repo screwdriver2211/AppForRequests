@@ -1,25 +1,26 @@
 ﻿namespace AppForRequests
 {
 
-    class Request
+    public class Request
     {
-        private string requestNumber
+        /// <summary>
+        /// Номер заявки
+        /// </summary>
+        public string NumberRequest { get; set; }
+        public string PartName { get; set; }
+        public int QuantityOrdered { get; set; }
+
+
+        public Request(string numberConsignment, string partName, int quantityOrdered)
         {
-            get; set;
+            NumberRequest = numberConsignment;
+            PartName = partName;
+            QuantityOrdered = quantityOrdered;
         }
-        private string nameOfDetail
+        public override string ToString()
         {
-            get; set;
+            return $"{NumberRequest}. {PartName}: заказано - {QuantityOrdered} шт, ";
         }
-        private int countOfDetail
-        {
-            get; set;
-        }
-        public Request(string requestNumber, string nameOfDetail, int countOfDetail)
-        {
-            this.requestNumber = requestNumber;
-            this.nameOfDetail = nameOfDetail;
-            this.countOfDetail = countOfDetail;
-        }
+
     }
 }
